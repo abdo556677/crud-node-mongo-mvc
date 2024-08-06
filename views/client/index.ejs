@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('includes/navbar') %>
+
+    <ul>
+        <% texts.forEach(text => { %>
+            <li>
+                <a href="show/<%= text._id %>"><h3><%= text.text %></h3></a>
+                <a href="edit/<%= text._id %>">edit</a>
+                <a href="/delete/<%= text._id %>">delete</a>
+            </li> 
+        <% }) %>
+    </ul>
+</body>
+</html>
