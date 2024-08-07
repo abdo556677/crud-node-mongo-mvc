@@ -24,7 +24,7 @@ async function createText(req,res){
 async function readTexts(req,res){
     try {
         await connectDB();
-        const texts=await Text.find()
+        const texts = await Text.find()
         res.render('client/index',{texts})
         await disconnectDB()
         // res.redirect('/home');
